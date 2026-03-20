@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Password Creator</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 680px; margin: 2rem auto; padding: 1rem; }
+    label, button { display: block; margin: .5rem 0; }
+    input[type=number] { width: 80px; }
+    #output { margin-top: 1rem; font-size: 1.25rem; word-break: break-all; }
+  </style>
+</head>
+<body>
+  <h1>Random Password Creator</h1>
+
+  <form id="form">
+    <label>
+      Length:
+      <input type="number" id="length" min="4" value="16" required />
+    </label>
+
+    <label><input type="checkbox" id="symbols" /> Include symbols</label>
+    <label><input type="checkbox" id="noLower" /> Exclude lowercase</label>
+    <label><input type="checkbox" id="noUpper" /> Exclude uppercase</label>
+    <label><input type="checkbox" id="noDigits" /> Exclude digits</label>
+
+    <button type="submit">Generate Password</button>
+  </form>
+
+  <div id="output"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
